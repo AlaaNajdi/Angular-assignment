@@ -1,0 +1,97 @@
+.table-container {
+  overflow-x: auto;
+  margin: 70px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+th {
+  background-color: #ffffff;
+  color: #613a3a;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) td {
+  background-color: #e4efe7;
+}
+tr:hover td {
+  background-color: #f8f4ec;
+}
+
+a {
+  color: #1976d2;
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center; /* يجعل الفلتر بالنص */
+  margin: 24px 0;
+}
+
+.custom-filter {
+  width: 550px;
+  min-width: 250px;
+  height: 80px;
+}
+
+.l1 {
+  text-align: center;
+  font-size: 2.5rem; /* حجم كبير */
+  font-family: "Times New Roman", Times, serif; /* نوع الخط */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rotate-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon.up {
+  transform: rotate(180deg);
+}
+
+/* 🧱 Responsive */
+@media (max-width: 768px) {
+  th,
+  td {
+    font-size: 0.9rem;
+    padding: 12px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  th,
+  td {
+    font-size: 0.85rem;
+    padding: 10px 6px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .filter-container {
+    align-items: stretch;
+    gap: 6px;
+  }
+}
