@@ -39,5 +39,5 @@ This project was deployed using Netlify
 ---
 
 ## 📸 Demo
-
 [Live Site on Netlify]: https://jobsdashbord.netlify.app/
+
