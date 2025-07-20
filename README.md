@@ -4,6 +4,10 @@ This is a simple, responsive jobs dashboard built with Angular. This project mar
 This assignment provided a valuable opportunity to expand my skill set and gain practical understanding of a new front-end framework.
 
 ---
+## 📸 Demo
+https://jobsdashbord.netlify.app/
+
+---
 
 ## 🔧 Features
 
@@ -38,6 +42,5 @@ This project was deployed using Netlify
 
 ---
 
-## 📸 Demo
-[Live Site on Netlify]: https://jobsdashbord.netlify.app/
+
 
