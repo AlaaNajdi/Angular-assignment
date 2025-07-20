@@ -136,3 +136,5 @@ export class App implements OnInit {
 //constructor is function when using in angular it is mean what the service needed inject insid component , so i say take my data from Data and make the copy into dataService brcuse th dataService is verable
 // 'this.dataService.getData()' hear call getData() that write insid 'import { Data } from './services/data';'insid this you should rerember i used 'Observable' it is mean the data maybe late ..when is comming implement 'subscribe'
 // the benfit when using 'OnInit'  when the page is show after then you can implement the code insid the 'OnInit'..so you can write insid 'OnInit' the api code or data service is the brtter way
+//Object.keys==>print in chart 'Entry', 'Mid', 'Senior'
+//Object.values==> print in chart 5, 3, 2

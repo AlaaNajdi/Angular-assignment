@@ -1,59 +1,43 @@
-# Test
+# Jobs Dashboard - Angular Assignment
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+This is a simple, responsive jobs dashboard built with Angular. This project marks my first hands-on experience with Angular.Throughout the development process, I encountered a few technical challenges. However, I remained committed to learning by referring to official documentation, exploring Angular Material resources, and watching educational tutorials.
+This assignment provided a valuable opportunity to expand my skill set and gain practical understanding of a new front-end framework.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🔧 Features
 
-```bash
-ng serve
-```
+- ✅ I fetches jobs data from an external API .
+- ✅ Display jobs data in a dynamic table
+  - ✅ Filter jobs by location
+  - ✅ Sort jobs alphabetically by using localeCompare()
+  - ✅ Drill-down links to the original job posting
+- ✅ Doughnut chart showing number of jobs per level (via Chart.js)
+- ✅ Smooth fade animations
+- ✅ Responsive layout with media queries for mobile, tablet, and desktop
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Tech Stack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Category      | Technology                                                                     |
+| ------------- | ------------------------------------------------------------------------------ |
+| Frontend      | Angular 20                                                                     |
+| UI Components | Angular Material (toolbar, table, icons, select box, form field, slide toggle) |
+| Charts        | ng2-charts (based on Chart.js)                                                 |
+| Styling       | CSS + Flexbox + Media Queries                                                  |
+| Animations    | Angular Animations                                                             |
+| HttpClient    | HttpClientModule                                                               |
+| Observable    | RxJS                                                                           |
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Deployment
 
-```bash
-ng generate --help
-```
+This project was deployed using Netlify
 
-## Building
+---
 
-To build the project run:
+## 📸 Demo
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[Live Site on Netlify]: https://jobsdashbord.netlify.app/
