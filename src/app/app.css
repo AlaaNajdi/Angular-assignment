@@ -49,6 +49,13 @@ a:hover {
   justify-content: center; /* يجعل الفلتر بالنص */
   margin: 24px 0;
 }
+.sticky-filter {
+  position: sticky;
+  top: 64px; /* حسب ارتفاع الـ toolbar عندك */
+  z-index: 100;
+  padding: 10px;
+  margin-bottom: 16px;
+}
 
 .custom-filter {
   width: 550px;
