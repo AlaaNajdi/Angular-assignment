@@ -1,6 +1,7 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { DataService } from './services/data'; // call service because is have the information
 import { MatTableModule } from '@angular/material/table'; // import Angular Material becouse my version of angular is signal
+import { NgChartsModule } from 'ng2-charts';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; //for using [(ngModel)]
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -15,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   standalone: true, // You should write to understud is Standalone Component
   imports: [
     MatTableModule,
+    NgChartsModule,
     CommonModule,
     FormsModule,
     MatSlideToggleModule,
@@ -42,6 +44,9 @@ export class App implements OnInit {
   locations: string[] = [];
   selectedLocation: string = '';
   sortDirection: 'asc' | 'desc' = 'asc';
+  levelCounts: { [level: string]: number } = {};
+  levelLabels: string[] = [];
+  levelData: number[] = [];
 
   constructor(private dataService: DataService) {}
 
@@ -51,7 +56,8 @@ export class App implements OnInit {
         this.Jobs = data;
         this.filteredJobs = data;
         this.extractLocations(data);
-        console.log('the jobs is:', this.Jobs);
+        this.chartData();
+        // console.log('the jobs is:', this.Jobs);
       },
       error: (err) => console.error('error when fetch jobs', err),
     });
@@ -60,6 +66,7 @@ export class App implements OnInit {
   //next: (data)==> it is mean when data is sucssful coming after then stor on Jobs
 
   // i say for table this is column and you should apaerrenc excatly
+
   displayedColumns: string[] = [
     'name',
     'company',
@@ -108,10 +115,22 @@ export class App implements OnInit {
       ];
       this.sortDirection = 'asc';
     }
-    // console.log('تم الترتيب حسب:', this.sortDirection);
+    // console.log('sorting by according:', this.sortDirection);
   }
   //(...this.filteredJobs)=> it is mean the new copy of filteredJobs array
   // localeCompare => it is function using with string to comper between tow words according languge=>return -1 if a then b ,1 if b then a ,0 if a=b
+
+  chartData() {
+    this.levelCounts = {};
+
+    this.Jobs.forEach((job) => {
+      const levelName = job.levels[0]?.name || 'undifine';
+      this.levelCounts[levelName] = (this.levelCounts[levelName] || 0) + 1;
+    });
+
+    this.levelLabels = Object.keys(this.levelCounts);
+    this.levelData = Object.values(this.levelCounts);
+  }
 }
 
 //constructor is function when using in angular it is mean what the service needed inject insid component , so i say take my data from Data and make the copy into dataService brcuse th dataService is verable

@@ -79,3 +79,31 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
+
+<br />
+<br />
+<br />
+
+<div style="max-width: 600px; margin: auto">
+  <canvas
+    baseChart
+    [data]="{
+      labels: levelLabels,
+      datasets: [
+        {
+          data: levelData,
+          label: ' The Number Of Jobs',
+          backgroundColor: [
+            '#42A5F5',
+            '#66BB6A',
+            '#FFA726',
+            '#AB47BC',
+            '#EF5350'
+          ]
+        }
+      ]
+    }"
+    [type]="'doughnut'"
+  >
+  </canvas>
+</div>
