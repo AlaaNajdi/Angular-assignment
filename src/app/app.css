@@ -1,7 +1,9 @@
 .table-container {
   overflow-x: auto;
-  margin: 70px;
+  margin: 20px auto;
+  padding: 0 8px;
   border-radius: 12px;
+  max-width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,10 +82,15 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  .table-container {
+    margin: 10px;
+    padding: 0;
+  }
+
   th,
   td {
     font-size: 0.85rem;
-    padding: 10px 6px;
+    padding: 6px 4px;
   }
 
   .mat-form-field {
