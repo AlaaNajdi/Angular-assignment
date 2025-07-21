@@ -45,14 +45,14 @@
     <ng-container matColumnDef="company">
       <th mat-header-cell *matHeaderCellDef>Company Name</th>
       <td mat-cell *matCellDef="let job">
-        {{ job.company?.name || "غير محدد" }}
+        {{ job.company?.name || "undifine" }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="location">
       <th mat-header-cell *matHeaderCellDef>Location</th>
       <td mat-cell *matCellDef="let job">
-        {{ job.locations[0]?.name || "غير محدد" }}
+        {{ job.locations[0]?.name || " undifine" }}
       </td>
     </ng-container>
 
